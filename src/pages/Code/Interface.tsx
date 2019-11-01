@@ -3,6 +3,8 @@ import styles from './Interface.css';
 import { render } from 'react-dom';
 import { SearchSource } from '@jest/core';
 
+// 啥时候使用接口
+
 // 使用接口确保拥有指定类型的结构
 interface loggerInterface {
   log(arg: any): void;
