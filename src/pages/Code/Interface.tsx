@@ -215,6 +215,9 @@ export default function () {
           <li>
             接口描述函数类型
           </li>
+          <li>
+            接口描述范型的类型
+          </li>
         </ol>
         <div>
           接口的属性类型
