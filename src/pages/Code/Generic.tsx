@@ -62,24 +62,39 @@ function create<T>(c: {new(): T; }): T {
 
 class BeeKeeper {
   hasMask: boolean;
+  constructor(hasMask: boolean) {
+    this.hasMask = hasMask
+  }
 }
 class ZooKeeper {
-  nametag: string;
+  nametag: string = 'zoo';
 }
 class Animal {
-  numLegs: number;
+  numLegs: number = 0;
+  // constructor(numLegs: number) {
+  //   this.numLegs = numLegs;
+  // }
 }
 class Bee extends Animal {
   keeper: BeeKeeper;
+  constructor(keeper: BeeKeeper) {
+    super();
+    this.keeper = keeper;
+  }
 }
 class Lion extends Animal {
   keeper: ZooKeeper;
+  constructor(keeper: ZooKeeper) {
+    super();
+    this.keeper = keeper;
+  }
 }
 function createInstance<A extends Animal>(c: new () => A): A {
   return new c();
 }
-createInstance(Lion).keeper.nametag;  // typechecks!
-createInstance(Bee).keeper.hasMask;   // typechecks!
+// console.log(createInstance(Lion))
+// createInstance(Lion).keeper.nametag;  // typechecks!
+// createInstance(Bee).keeper.hasMask;   // typechecks!
 
 export default function() {
   return (
