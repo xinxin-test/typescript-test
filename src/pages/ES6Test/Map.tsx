@@ -25,7 +25,7 @@ const p4 = p2.get(o1);
 const p5 = p2.has(o1);
 // console.log(p5) //2
 
-console.log(p2.keys())
+// console.log(p2.keys())
 
 export default function() {
   return (
