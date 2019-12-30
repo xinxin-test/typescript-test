@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'umi/link';
 import styles from './index.css';
 
 export default function() {
@@ -11,6 +12,9 @@ export default function() {
           <a href="https://umijs.org/guide/getting-started.html">
             Getting Started
           </a>
+        </li>
+        <li>
+          <Link to="/ES6Test/">目录</Link>
         </li>
       </ul>
     </div>
