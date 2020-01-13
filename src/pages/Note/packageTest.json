@@ -1,0 +1,78 @@
+{
+  "name": "必填",
+  "version": "必填name 和 version ，这两个属性组成一个 npm 模块的唯一标识。",
+  "description": "用于添加模块的的描述信息，方便别人了解你的模块",
+  "keywords": ["ant", "ui", "模块关键字"],
+  "author": {
+    "name": "NPM包的主要作者,author字段也可以是一个字符串",
+    "email": "",
+    "url": ""
+  },
+  "contributors": [{
+    "name": "NPM包的贡献人员信息,该字段也可以是一个字符串数组",
+    "email": "",
+    "url": ""
+  }],
+  "homepage": "指定模块主页",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ant-design/ant-design"
+  },
+  "bugs": "一个地址或者邮箱",
+  "dependencies": {
+    "describe": "指定了项目运行所依赖的模块，开发环境和生产环境的依赖模块都可以配置到这里"
+  },
+  "devDependencies": {
+    "describe": "有一些包有可能你只是在开发环境中用到，例如你用于检测代码规范的 eslint ,用于进行测试的 jest ，用户使用你的包时即使不安装这些依赖也可以正常运行，反而安装他们会耗费更多的时间和资源，所以你可以把这些依赖添加到 devDependencies 中，这些依赖照样会在你本地进行 npm install 时被安装和管理，但是不会被安装到生产环境"
+  },
+  "peerDependencies": {
+    "describe": "指定你正在开发的模块所依赖的版本以及用户安装的依赖包版本的兼容性。",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "optionalDependencies": {
+    "describe": "某些场景下，依赖包可能不是强依赖的，这个依赖包的功能可有可无，当这个依赖包无法被获取到时，你希望 npm install 继续运行，而不会导致失败，你可以将这个依赖放到 optionalDependencies 中，注意 optionalDependencies 中的配置将会覆盖掉 dependencies 所以只需在一个地方进行配置。"
+  },
+  "bundledDependencies": ["发布时一起被打包的包"],
+  "license": "指定软件的开源协议，开源协议里面详尽表述了其他人获得你代码后拥有的权利，可以对你的的代码进行何种操作，何种操作又是被禁止的。",
+  "main": "lib/index.js  指定程序的主入口文件",
+  "bin": {
+    "conard": ""
+  },
+  "files": [
+    "描述你 npm publish 后推送到 npm 服务器的文件列表，如果指定文件夹，则文件夹内的所有内容都会包含进来"
+  ],
+  "man": [
+    "man 命令是 Linux 下的帮助指令，通过 man 指令可以查看 Linux 中的指令帮助、配置文件帮助和编程帮助等信息。",
+    "如果你的 node.js 模块是一个全局的命令行工具，在 package.json 通过 man  属性可以指定 man 命令查找的文档地址。",
+    "man 文件必须以数字结尾，或者如果被压缩了，以 .gz 结尾。数字表示文件将被安装到 man 的哪个部分。"
+  ],
+  "directories": {
+    "describe": "指定你的目录结构和上述的规范结构的对应情况",
+    "lib": "src/lib/",
+    "bin": "src/bin/",
+    "man": "src/man/",
+    "doc": "src/doc/",
+    "example": "src/example/"
+  },
+  "scripts": {
+    "test": "jest --config .jest.js --no-cache",
+    "dist": "antd-tools run dist",
+    "compile": "antd-tools run compile",
+    "build": "npm run compile && npm run dist",
+    "describe": "scripts 用于配置一些脚本命令的缩写，各个脚本可以互相组合使用，这些脚本可以覆盖整个项目的生命周期，配置后可使用 npm run command 进行调用。"
+  },
+  "config" : { "port" : "8080", "describe": "用于配置脚本中使用的环境变量，例如下面的配置，可以在脚本中使用process.env.npm_package_config_port进行获取。" },
+  "preferGlobal": "如果你的 node.js 模块主要用于安装到全局的命令行工具，那么该值设置为 true ，当用户将该模块安装到本地时，将得到一个警告。这个配置并不会阻止用户安装，而是会提示用户防止错误使用而引发一些问题。",
+  "private": "如果将 private 属性设置为 true，npm将拒绝发布它，这是为了防止一个私有模块被无意间发布出去。",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "describe": "发布模块时更详细的配置，例如你可以配置只发布某个 tag、配置发布到的私有 npm 源。更详细的配置可以参考 npm-config"
+  },
+  "os": [
+    "darwin", "linux", "!win32", "指定模块只能被安装在某些系统下，或者指定一个不能安装的系统黑名单"
+  ],
+  "cpu": [
+    "x64", "ia32"
+  ]
+}
