@@ -22,6 +22,6 @@ function test(resolve, reject) {
   }, timeOut * 1000);
 }
 
-var p1 = new Promise(test);
-var p2 = p1.then(function (result) {});
-var p3 = p2.catch(function (reason) {});
+// var p1 = new Promise(test);
+// var p2 = p1.then(function (result) {});
+// var p3 = p2.catch(function (reason) {});

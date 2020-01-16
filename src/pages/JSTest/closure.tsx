@@ -61,11 +61,11 @@ var foo2 = (function CoolModule() {
   var another = [1, 2, 3];
 
   function doSomething() {
-    console.log(something);
+    // console.log(something);
   }
 
   function doAnother() {
-    console.log(another.join(" ! "));
+    // console.log(another.join(" ! "));
   }
 
   return {
@@ -80,7 +80,7 @@ foo2.doAnother(); // 1 ! 2 ! 3
 // 模块可以接受一个参数
 function CoolModule(id: any) {
   function identify() {
-    console.log(id);
+    // console.log(id);
   }
 
   return {
@@ -100,11 +100,11 @@ var foo4 = (function CoolModule(id) {
   }
 
   function identify1() {
-    console.log(id);
+    // console.log(id);
   }
 
   function identify2() {
-    console.log(id.toUpperCase());
+    // console.log(id.toUpperCase());
   }
 
   var publicAPI = {
@@ -152,7 +152,7 @@ MyModules.define("foo", ["bar"], function (bar: any) {
   var hungry = "hippo";
 
   function awesome() {
-    console.log(bar.hello(hungry).toUpperCase());
+    // console.log(bar.hello(hungry).toUpperCase());
   }
 
   return {

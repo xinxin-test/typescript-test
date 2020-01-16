@@ -136,7 +136,7 @@ abstract class Department {
   constructor(public name: string) { }
   // 抽象类可以包含成员的实现细节
   printName(): void {
-    console.log('Department name: ' + this.name);
+    // console.log('Department name: ' + this.name);
   }
   // 在抽象类内部定义抽象方法
   abstract printMeeting(): void; // 必须在派生类中实现
@@ -147,7 +147,7 @@ class AccountingDepartment extends Department {
     super('Accounting and Auditing'); // 在派生类的构造函数中必须调用 super()
   }
   printMeeting(): void {
-    console.log('The Accounting Department meets each Monday at 10am.');
+    // console.log('The Accounting Department meets each Monday at 10am.');
   }
   generateReports(): void {
     console.log('Generating accounting reports...');
