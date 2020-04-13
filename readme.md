@@ -6,6 +6,8 @@ umi g page pageName
 
 umi dev
 
+yarn start
+
 ## 部署发布
 
 umi build
